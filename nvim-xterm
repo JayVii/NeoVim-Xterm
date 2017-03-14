@@ -1,0 +1,14 @@
+#!/bin/bash
+# https://git.jayvii.de/Scripts/NeoVim-Xterm
+# V 0.1
+
+if ! [ $(ls /usr/bin/xterm) ]; then
+	echo "[ERROR] neovim-wrapper requires xterm"
+	exit 1;
+fi
+
+# run xterm with following arguments (run "man xterm" for more information)
+XTERM_ARGS="+ah +ai -aw -b 1 -bc +cm -cu -name NeoVim -title NeoVim -u8"
+
+# run nvim (font, font-bold, font-icons, font-size)
+xterm ${XTERM_ARGS} -fa "DejaVu Sans Mono for Powerline" -fb "DejaVu Sans for Powerline Bold" -fi "PowerlineSymbols" -fs 12 -e nvim
