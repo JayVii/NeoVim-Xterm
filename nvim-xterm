@@ -10,7 +10,7 @@ fi
 # run xterm with following arguments (run "man xterm" for more information)
 XTERM_ARGS="+ah +ai -aw -b 1 -bc +cm -cu -name NeoVim -title NeoVim -u8"
 # run xterm with following fonts (run "man xfontsel" for more information)
-XTERM_FONTS="-fs 12 -fa *-fixed-*-*-*--8 -fb *-fixed-bold-*-*-*-8"
+XTERM_FONTS="-fs 12 -fa *-fixed-*-*-*-*-*-*-*-*-*-*-*-8 -fb *-fixed-*-*-*-*-*-*-*-*-*-*-*-8"
 
 # run nvim with specified xterm-args
 xterm ${XTERM_ARGS} ${XTERM_FONTS} -e nvim
