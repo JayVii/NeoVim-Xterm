@@ -9,6 +9,8 @@ fi
 
 # run xterm with following arguments (run "man xterm" for more information)
 XTERM_ARGS="+ah +ai -aw -b 1 -bc +cm -cu -name NeoVim -title NeoVim -u8"
+# run xterm with following fonts (run "man xfontsel" for more information)
+XTERM_FONTS="-fs 12 -fa *-fixed-*-*-*--8 -fb *-fixed-bold-*-*-*-8"
 
-# run nvim (font, font-bold, font-icons, font-size)
-xterm ${XTERM_ARGS} -fa "DejaVu Sans Mono for Powerline" -fb "DejaVu Sans for Powerline Bold" -fi "PowerlineSymbols" -fs 12 -e nvim
+# run nvim with specified xterm-args
+xterm ${XTERM_ARGS} ${XTERM_FONTS} -e nvim
