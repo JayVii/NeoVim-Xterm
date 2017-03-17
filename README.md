@@ -35,4 +35,5 @@ sudo cp nvim-xterm /usr/bin/nvim-xterm
 - check out my [dot-files](https://git.jayvii.de/dotfiles/nvim) or create your own.
 
 ### Screenshot
+
 ![Screenshot of Vim-Tutor in NeoVim-Xterm](./screenshot.png)
