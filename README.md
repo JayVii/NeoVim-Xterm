@@ -32,7 +32,16 @@ sudo cp nvim-xterm /usr/bin/nvim-xterm
 
 **neovim-appearance**
 
-- check out my [dot-files](https://git.jayvii.de/dotfiles/nvim) or create your own.
+- check out my [dot-files](https://github.com/JayVii/Configurations) or create your own.
+
+### Misc
+
+to use the tmux-nvim-wrapper, do:
+```
+sudo cp nvim-wrapper /usr/bin/nvim-wrapper
+echo "alias nvim=nvim-wrapper"
+sed -e 's/nvim/nvim-wrapper/g' /usr/bin/nvim-xterm
+```
 
 ### Screenshot
 
