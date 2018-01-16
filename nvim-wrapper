@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+## Additional Script to nvim-xterm
+## https://github.com/JayVii/NeoVim-Xterm
+
+## Launches nvim within a tmux-session, tmux functions as tiling + tabbing hub
+## which is quicker and more flexible than NeoVim's built-in
+
+if [[ -z "$TMUX" ]] ;then
+    ID="`tmux ls | grep nvim | cut -d: -f1`" # get the id of a deattached session
+    if [[ -z "$ID" ]] ;then
+        tmux -2 new-session -s "nvim" -d "/usr/bin/nvim \"$1\"" # if not existing, create one
+	tmux -2 attach-session -t "nvim" # attach to existing
+    else
+	tmux -2 new-window -d "/usr/bin/nvim \"$1\"" # if existing, open new tab
+	tmux -2 next-window "nvim"
+    	tmux -2 attach-session -t "nvim" # attach to existing
+    fi
+fi
